@@ -61,6 +61,6 @@ class FormatTime {
             }
         }
  
-        return "Until " . $result;
+        return $result.' ago';
     }
 }
