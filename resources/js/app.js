@@ -12,4 +12,20 @@ import './bootstrap';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import './components/Example';
+import { handleLike, handleDislike } from './main.js';
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.btn-like').forEach((btn) => {
+    btn.style.cursor = 'pointer';
+    btn.addEventListener('click', () => {
+      handleLike(btn);
+    });
+  });
+
+  document.querySelectorAll('.btn-dislike').forEach((btn) => {
+    btn.style.cursor = 'pointer';
+    btn.addEventListener('click', () => {
+      handleDislike(btn);
+    });
+  });
+});
