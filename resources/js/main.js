@@ -39,3 +39,17 @@ export function handleDislike(btn) {
       console.error('Error making the request', error);
     });
 }
+
+export function handleSearch() {
+  const searchForm = document.getElementById('search-form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) {
+        this.setAttribute('action', `${url}/people/${searchInput.value}`);
+        this.submit();
+      }
+    });
+  }
+}

@@ -12,7 +12,7 @@ import './bootstrap';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import { handleLike, handleDislike } from './main.js';
+import { handleLike, handleDislike, handleSearch } from './main.js';
 
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('.btn-like').forEach((btn) => {
@@ -28,4 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
       handleDislike(btn);
     });
   });
+
+  handleSearch();
+  
 });
